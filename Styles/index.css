@@ -135,6 +135,14 @@ footer {
     border-radius: 8px;
   box-shadow: 0 0 15px rgba(189, 18, 251, 0.436);
 }
+.softwares ul{
+    font-weight: 800;
+    display: flex;
+    gap: 2rem;
+}
+ul strong{
+    color: var(--color-primary);
+}
 footer a {
   color: var(--color-background);
   text-decoration: none;
