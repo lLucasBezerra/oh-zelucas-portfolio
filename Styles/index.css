@@ -103,6 +103,7 @@ section{
     margin-bottom: 2rem;
     padding: 2rem 8rem;
 }
+
 footer {
   background-color: var(--color-primary);
   color: var(--color-background);
@@ -112,6 +113,27 @@ footer {
 .projects{
     background-color: var(--color-dark);
     color: var(--color-background);
+}
+.projects section{
+    padding: 0px;
+}
+.img-container {
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    gap: 1rem;
+}
+.art-image {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    break-inside: avoid;
+}
+.animation-project{
+    background-color: var(--color-primary);
+    padding: 2rem !important;
+    border-radius: 8px;
+  box-shadow: 0 0 15px rgba(189, 18, 251, 0.436);
 }
 footer a {
   color: var(--color-background);
