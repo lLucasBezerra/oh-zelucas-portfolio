@@ -44,10 +44,32 @@ header{
 }
 .header-text{
     font-weight: 800;
-    
     padding: 8px;
     width: 420px;
     border-radius: 8px;
+    animation: header-text-in 0.8s ease-out both;
+}
+
+@keyframes header-text-in {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes header-image-in {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 .header-text strong{
     color: var(--color-primary);
@@ -88,6 +110,7 @@ border-radius: 80px;
 .header-image-container{
     background-color: var(--color-primary);
     border-radius: 80px;
+  animation: header-image-in 0.8s ease-out both;
 }
 .header-image img{
     border-radius: 80px;
@@ -128,6 +151,13 @@ footer {
     object-fit: cover;
     margin-bottom: 1rem;
     break-inside: avoid;
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.art-image.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 .animation-project{
     background-color: var(--color-primary);
@@ -146,4 +176,54 @@ ul strong{
 footer a {
   color: var(--color-background);
   text-decoration: none;
+}
+
+@media (min-width: 769px) and (max-width: 1400px) {
+  .img-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    min-height: auto;
+    padding: 3rem 1.5rem;
+  }
+
+  .header-text {
+    width: 100%;
+  }
+
+  .header-image-container,
+  .header-image img {
+    max-width: 100%;
+  }
+
+  section {
+    padding: 2rem 1.5rem;
+  }
+
+  .projects section {
+    padding: 0;
+  }
+
+  .img-container {
+    grid-template-columns: 1fr;
+  }
+
+  .softwares ul {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .art-image {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }

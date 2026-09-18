@@ -59,3 +59,18 @@ arts.forEach((art) => {
     projectList.appendChild(categoria);
 });
 
+const imageObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      entry.target.classList.toggle("is-visible", entry.isIntersecting);
+    });
+  },
+  {
+    threshold: 0.15,
+  },
+);
+
+document.querySelectorAll(".art-image").forEach((image) => {
+  imageObserver.observe(image);
+});
+
