@@ -1,3 +1,119 @@
-.teste{
-    color: blue;
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.fascinate {
+  font-family: "Fascinate", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+}
+.inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+    --color-primary: #69267F;
+    --color-secondary: #86990B;
+    --color-tertiary: #453C0E;
+    --color-background: #C9C1A1;
+    --color-dark: #0f0a04;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-dark);
+}
+header{
+    background-color: var(--color-dark);
+    color: var(--color-background);
+    padding: 1rem;
+    min-height: 80vh;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    padding-inline: 80px;
+    align-items: center;
+}
+.header-text{
+    font-weight: 800;
+    
+    padding: 8px;
+    width: 420px;
+    border-radius: 8px;
+}
+.header-text strong{
+    color: var(--color-primary);
+}
+.btn {
+    background: linear-gradient(
+  to bottom,
+  var(#69267F),
+  var(#511a63)
+);
+font-family: 'Inter', sans-serif;
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  margin-top: 1.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+.header-image {
+  position: relative;
+}
+
+.header-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+border-radius: 80px;
+  background:
+    linear-gradient(to right, var(--color-primary), transparent 20%, transparent 80%, var(--color-primary)),
+    linear-gradient(to bottom, var(--color-primary), transparent 20%, transparent 80%, var(--color-primary));
+}
+.header-image-container{
+    background-color: var(--color-primary);
+    border-radius: 80px;
+}
+.header-image img{
+    border-radius: 80px;
+}
+h1{
+    font-size: 3rem;
+    /* margin-bottom: 1rem; */
+}
+section{
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    margin-bottom: 2rem;
+    padding: 2rem 8rem;
+}
+footer {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  padding: 1rem;
+  text-align: center;
+}
+.projects{
+    background-color: var(--color-dark);
+    color: var(--color-background);
+}
+footer a {
+  color: var(--color-background);
+  text-decoration: none;
 }
